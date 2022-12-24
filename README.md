@@ -10,8 +10,7 @@ public static double fitness(char[][] shreds, int[] perm) {
 
 - the expected frequency of english character combinations can be found at [english character combinations](http://practicalcryptography.com/cryptanalysis/letter-frequencies-various-languages/english-letter-frequencies/).
 
-
-``` java
+```java
 double[][] expectedFrequencies = new double[26][26];
 expectedFrequencies['t' - 'a']['h' - 'a'] = 0.027056980400061274; // expected frequency of th
 expectedFrequencies['h' - 'a']['e' - 'a'] = 0.0232854497343354; // expected frequency of he
@@ -59,35 +58,44 @@ public static void prettyPrint(char[][] doc) {
 
 - compiling & running
 
+1. windows
+
 ```bash
 # compile source code (in terminal)
 javac Shredder.java
 ```
 
-- compiling generates a Shredder.class file, run by
+- run the generated Shredder.class
 
 ```bash
-# run (in terminal)
 java Shredder
+```
+
+2. linux
+
+```bash
+java Shredder.java
 ```
 
 ```bash
 # sample output
-the fitness value for shredded.txt is: 22.98121387283832
+the fitness value for shredded.txt is: 22.93649854946776
 the shredded document:
 siT s ih
 kcaiu q
 T t.thse
 txiet  s
  riaft s
-trooh.s
+trooh.so
 
-on unshredding, the fitness value is: 22.28297552751616
+on unshredding, the fitness value is: 22.244754288783763
 the unshredded document:
 This is
 a quick
 test. Th
 is text
 is far t
-o short.
+ooshort.
+
+
 ```
